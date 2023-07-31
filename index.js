@@ -1,11 +1,23 @@
+let player={
+    name:"gracy",
+    score:200,
+    sayHello:function(){
+        console.log("hello gracy")
+    }
+
+
+}
 let cards=[]
 sum=0;
 let game=true
 let blackjack=false
 let out=false
+
 let cardsEl=document.getElementById("cards-el")
 let sumEl=document.getElementById("sum-el")
 let messageEl=document.getElementById("message-el")
+let playerEl=document.getElementById("player-el")
+playerEl.textContent=player.name+": $"+player.score
 function startGame(){
      out=true
      if(game===true){
@@ -53,7 +65,4 @@ function newCard(){
         render()
 
     }
-
-
-
 }
